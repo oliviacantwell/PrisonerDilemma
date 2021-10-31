@@ -9,7 +9,7 @@ see the picture below.
 
 ![](goldenBallsFormula.png)
 
-[Software Demo Video](youtube.com)
+[Software Demo Video](https://youtu.be/T4yKguNrnpg)
 
 ## Development Environment
 This was written in Kotlin in Intellij.
