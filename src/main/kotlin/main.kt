@@ -8,6 +8,7 @@ class Game{
 
     fun opponentChoices(): Int {
 
+    //randomly generates opponent's choice
     val steal = 1
     val split = 2
 
@@ -18,6 +19,8 @@ class Game{
         println("Enter 's' for split or 't' for steal")
         val scanner = Scanner(System.`in`)
         var playerChoice = scanner.next().single().lowercaseChar()
+
+        //makes sure you put the right choice...
         while (playerChoice.lowercaseChar() != 's' && playerChoice.lowercaseChar() != 't'){
             println("Please Enter a valid choice")
             playerChoice = scanner.next().single().lowercaseChar()
@@ -26,6 +29,8 @@ class Game{
     }
 
     fun playerScore(addNum1: Int): Int {
+
+        //adds any points you got to your total score
         print("And you got $addNum1 ")
         playerScore += addNum1
         println("for a total of $playerScore")
@@ -33,6 +38,8 @@ class Game{
     }
 
     fun opponentScore(addNum2: Int): Int {
+
+        //adds any points opponent got to their total score
         print("Your opponent got $addNum2 ")
         opponentScore += addNum2
         println("for a total of $opponentScore")
@@ -45,6 +52,7 @@ class Game{
         else
             println("Your opponent chose split!")
 
+        //figures out what choices everyone made and calls the functions to add to the scores
         when {
             opponentChoice == 2 && playerChoice == 's' -> opponentScore(50) and playerScore(50)
             opponentChoice == 2 && playerChoice == 't' -> opponentScore(0) and playerScore(100)
@@ -62,14 +70,16 @@ class Game{
         while (round <= rounds)
         {
             println("\nRound $round")
-            var opponentChoice = opponentChoices()
-            var playerChoice = playerChoices()
-            calcOutcome(opponentChoice, playerChoice)
+            var opponentChoice = opponentChoices() //gets opponent's choice
+            var playerChoice = playerChoices() //gets your choice
+            calcOutcome(opponentChoice, playerChoice) //adds up scores
             round++
         }
     }
 
     fun winner() {
+
+        //compares the scores and declares the winner
         println("\nGame Over!")
         println("Your score: $playerScore")
         println("Your opponent score: $opponentScore")
@@ -82,7 +92,6 @@ class Game{
     }
 
 }
-
 
 fun main () {
 
