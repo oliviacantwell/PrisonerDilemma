@@ -7,7 +7,8 @@ The decision of the opponent and the user will determine how much money (if any)
 At the end of the rounds, whoever has the most money wins. To describe the formula behind the division of money,
 see the picture below.
 
-![](goldenBallsFormula.png)
+![image](https://user-images.githubusercontent.com/90710048/139566723-43096c81-64de-49ea-a5e9-ce3dca7699ce.png)
+
 
 [Software Demo Video](youtube.com)
 
